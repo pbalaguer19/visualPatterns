@@ -23,5 +23,5 @@ function checkResult(){
 
 function pretty(string){
     var tmp = string.charAt(0).toUpperCase() + string.slice(1);
-    return tmp.replace(" ", "").replace(" ", "");
+    return tmp.trim();
 }
