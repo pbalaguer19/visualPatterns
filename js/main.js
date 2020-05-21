@@ -9,6 +9,8 @@ document.getElementById("pattern").src = "./img/" + imageNumber + ".jpg";
 var solutions = JSON.parse(solutionsTxt);
 var objectTypes = JSON.parse(objectTypesTxt);
 var element = objectTypes[imageNumber];
+var intents = 1;
+
 if (typeof element === 'undefined') {
   element = objectTypes[" " + imageNumber + " "]
 }
@@ -16,8 +18,15 @@ document.getElementById("text").innerHTML = "Nombre d'elements (" + pretty(eleme
 
 function checkResult(){
   if(document.getElementById("response").value == solutions[imageNumber]){
-    window.alert("Molt bé!");
+    window.alert("Molt bé! Ho has encertat a l'intent número " + intent);
     location.reload();
+  }else{
+    if(parseInt(document.getElementById("response").value) > parseInt(solutions[imageNumber])){
+      window.alert("Llàstima, el número és més petit. Número d'intents: " + intents);
+    }else{
+      window.alert("Llàstima, el número és més gran. Número d'intents: " + intents);
+    }
+    intents++;
   }
 }
 
