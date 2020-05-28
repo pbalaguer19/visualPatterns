@@ -10,27 +10,47 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Patrons visuals</title>
+    <title data-translatable>Patrons visuals // Visual Patterns // Patrones Visuales</title>
 
     <!-- Font special for pages-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <!-- Main CSS-->
     <link href="css/main.css" rel="stylesheet" media="all">
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-end">
+    <a class="navbar-brand" href="#" data-translatable>Patrons visuals // Visual Patterns // Patrones Visuales</a>
+    <button class="btn btn-success ml-auto mr-1" style="visibility: hidden;"></button>
+
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+        <ul class="navbar-nav text-right">
+            <li class="nav-item active">
+                <a id="cat" onclick="changeCatalan();" class="nav-link not-active" href="#">Català</a>
+            </li>
+            <li class="nav-item active">
+                <a id="esp" onclick="changeSpanish();" class="nav-link" href="#">Español</a>
+            </li>
+            <li class="nav-item active">
+                <a id="eng" onclick="changeEnglish();" class="nav-link" href="#">English</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
             <div class="card card-5">
                 <div class="card-heading">
-                    <h2 class="title">Patrons visuals</h2>
+                    <h2 class="title" data-translatable>Patrons visuals // Visual Patterns // Patrones Visuales</h2>
                 </div>
                 <div class="card-body">
                     <img id="pattern" src="" alt="Patró visual" width="500px">
 
                       <div class="form-row">
-                          <div id="text" class="name p-t-10">Nombre d'elements al pas 43</div>
+                          <div id="text" class="name p-t-10" data-translatable>Nombre d'elements al pas 43 // Elements number in 43th step // Numero de elementos en el paso 43</div>
                           <div class="value p-t-10">
                               <div class="input-group">
                                   <input id="response" class="input--style-5" type="number" name="company">
@@ -38,8 +58,8 @@
                           </div>
                       </div>
                       <div>
-                          <button class="btn btn--radius-2 btn--red" type="" onclick="checkResult()">Verifica</button>
-                          <button class="btn btn--radius-2 btn--blue right" type="" onclick="location.reload();">Canvia patró</button>
+                          <button class="btn btn--radius-2 btn--red" type="" onclick="checkResult()" data-translatable>Verifica // Check // Comprobar</button>
+                          <button class="btn btn--radius-2 btn--blue right" type="" onclick="main();" data-translatable>Canvia patró // Change pattern // Cambiar patron</button>
                       </div>
                 </div>
             </div>
@@ -50,14 +70,15 @@
       <div class="container">
         <div class="row">
           <div style="color:white;">
-            <p>Creat per Pau Balaguer</p>
-            <p><small>Tots els patrons han estat extrets de VisualPatterns (http://www.visualpatterns.org/)</small></p>
+            <p data-translatable>Creat per Pau Balaguer // Created by Pau Balaguer // Creado por Pau Balaguer</p>
+            <p><small data-translatable>Tots els patrons han estat extrets de VisualPatterns (http://www.visualpatterns.org/) // All patterns have been extracted from VisualPatterns (http://www.visualpatterns.org/) // Todos los patrons han sido extraidos de VisualPatterns (http://www.visualpatterns.org/)</small></p>
             <p><small>This templates was made by Colorlib (https://colorlib.com)</small></p>
           </div>
         </div>
       </div>
     </footer>
     <!-- Main JS-->
+    <script src="js/dom-i18n.js"></script>
     <script src="js/main.js"></script>
 
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->

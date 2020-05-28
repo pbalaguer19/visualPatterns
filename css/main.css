@@ -787,3 +787,12 @@ input {
     color: #fff;
     color: rgba(255, 255, 255, 0.5);
     text-transform: uppercase; }
+
+
+
+    .not-active {
+      pointer-events: none;
+      cursor: default;
+      text-decoration: none;
+      color: #bbbbbb!important;
+    }
